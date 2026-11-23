@@ -69,3 +69,28 @@
 .project-grid .project-card:not(:first-child) img.scrap-tape { display:none !important; }
 .project-grid .project-card:first-child img.scrap-tape { width:38px !important; height:auto !important; max-height:none !important; object-fit:contain !important; top:7px !important; left:8px !important; }
 @media (max-width:680px) { .project-grid .project-card:first-child img.scrap-tape { width:28px !important; top:6px !important; left:6px !important; } }
+
+/* Compact mobile timeline and scrapbook balance */
+@media (max-width:680px) {
+  .journey-section { padding:72px 0 54px; }
+  .journey-heading { margin-bottom:30px; gap:18px; }
+  .timeline,.rtl .timeline { width:100%; max-width:none; margin:0; }
+  .timeline:before,.rtl .timeline:before { left:82px; right:auto; }
+  .timeline-item,.rtl .timeline-item { direction:ltr; grid-template-columns:70px 24px minmax(0,1fr); column-gap:0; padding-bottom:24px; }
+  .timeline-date,.rtl .timeline-date { font-size:9px; letter-spacing:.02em; text-align:center; white-space:normal; overflow-wrap:anywhere; padding:4px 3px 0; }
+  .timeline-content,.rtl .timeline-content { direction:rtl; text-align:right; min-width:0; overflow-wrap:anywhere; }
+  .timeline-content h3 { font-size:20px; line-height:1.4; }
+  .timeline-content p { font-size:12px; line-height:1.8; }
+  .timeline-content small { font-size:11px; line-height:1.7; }
+  .timeline-type { font-size:9px; }
+  .timeline-date-featured { min-height:0; display:flex; align-items:flex-start; justify-content:center; padding-top:4px; }
+  .timeline-date-featured span { font-size:8px; white-space:normal; }
+  .timeline-date-featured .scrap-oval,.work-section > img.scrap-stamp,.hero-buttons img.scrap-bow { display:none !important; }
+  .timeline-item:nth-child(2) .timeline-date { display:flex; flex-direction:column; align-items:center; gap:3px; }
+  .timeline-item:nth-child(2) .timeline-date:before { content:""; display:block; width:29px; height:20px; background:url("assets/scraps/bow.webp") center/contain no-repeat; }
+  .project-grid .project-card:not(:first-child) img.scrap-tape { display:none !important; }
+  .project-grid .project-card:first-child img.scrap-tape { width:42px !important; height:auto !important; max-height:none !important; object-fit:contain !important; top:6px !important; left:7px !important; }
+  .tools-strip { display:block; margin:30px 0 0; padding-top:16px; }
+  .tools-label { display:inline-block; margin-bottom:12px; }
+  .tools-label .scrap-label { width:88px; left:-7px; top:-12px; }
+}

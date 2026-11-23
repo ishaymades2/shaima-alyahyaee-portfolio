@@ -18,7 +18,7 @@ const modal = document.querySelector("#projectModal");
 
 function renderProjects() {
   grid.innerHTML = projects.map((project, index) => `<button class="project-card" data-category="${project.category}" data-index="${index}" aria-label="${language === "en" ? "View" : "عرض"} ${language === "en" ? project.title : project.ar}">
-    <span class="project-image"><img src="${project.image}" alt="${project.alt}" loading="lazy" decoding="async"><span class="project-open" aria-hidden="true">+</span></span>
+    <span class="project-image">${index === 0 ? '<img class="scrap-deco scrap-tape" src="assets/scraps/tape.webp" alt="" aria-hidden="true">' : ""}<img src="${project.image}" alt="${project.alt}" loading="lazy" decoding="async"><span class="project-open" aria-hidden="true">+</span></span>
     <span class="project-details"><span><span class="project-name">${language === "en" ? project.title : project.ar}</span><br><span class="project-type">${language === "en" ? project.type : project.typeAr}</span></span><span class="project-index">${String(index + 1).padStart(2, "0")}</span></span>
   </button>`).join("");
   grid.querySelectorAll(".project-card").forEach(card => {

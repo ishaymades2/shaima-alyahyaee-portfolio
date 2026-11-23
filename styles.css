@@ -31,3 +31,18 @@
 .hero-collage{width:100%;max-width:500px}
 @media(max-width:900px){.hero-collage{max-width:430px}}
 @media(max-width:680px){.hero-art{overflow:hidden}.hero-collage{width:100%;max-width:360px}}
+
+/* Portrait-led About section with one individually extracted scrapbook flower. */
+.about-section{background:#f1e8e4;padding:112px 0 118px;}
+.about-layout{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:70px;}
+.about-visual{position:relative;isolation:isolate;direction:ltr;width:100%;height:590px;max-width:520px;margin-inline:auto;overflow:hidden;background:linear-gradient(145deg,#f8f3ec 0%,#f1e6df 70%,#eadbd8 100%);border:1px solid #fffaf4;box-shadow:0 25px 60px rgba(77,35,50,.09);}
+.about-visual:before{content:"";position:absolute;inset:14px;border:1px solid rgba(103,45,66,.13);pointer-events:none;}
+.about-visual:after{content:"";position:absolute;z-index:-1;right:5%;top:9%;width:72%;height:69%;border-radius:50%;background:radial-gradient(ellipse,#efc6ca 0,#edc9c8 42%,transparent 72%);opacity:.67;pointer-events:none;}
+.about-portrait{position:absolute;z-index:2;right:3%;bottom:0;height:91%;width:auto;max-width:90%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 13px 13px rgba(77,35,50,.13));}
+.about-scrap{position:absolute;z-index:3;width:auto;height:auto;object-fit:contain;pointer-events:none;user-select:none;filter:drop-shadow(0 5px 5px rgba(52,27,34,.13));}
+.scrap-flower{width:29%;left:3%;bottom:13%;transform:rotate(-9deg);}
+.about-copy{position:relative;z-index:4}.about-tags{direction:ltr;justify-content:flex-start}.rtl .about-copy{text-align:right}.rtl .about-visual{direction:ltr}.rtl .about-tags{justify-content:flex-start}.rtl .hero-art{transform:none}.rtl .hero-scrap,.rtl .hero-caption{transform:none}.rtl .hero-caption{left:3%;right:auto}.rtl .hero-scrap{right:3%;left:auto}.rtl .about-link{flex-direction:row;}
+.about-section .about-text,.about-section .about-copy h2{unicode-bidi:plaintext;}
+@media(max-width:900px){.about-layout{gap:40px}.about-visual{height:520px}.about-portrait{height:89%;}}
+@media(max-width:680px){.about-section{padding:68px 0 76px}.about-layout{grid-template-columns:1fr;gap:36px}.about-visual{width:min(100%,410px);height:490px}.about-portrait{height:89%;max-width:88%;right:2%}.scrap-flower{width:27%;left:2%;bottom:16%}.about-copy h2{font-size:clamp(44px,13vw,56px)}.rtl .about-copy h2{line-height:1.4}}
+@media(prefers-reduced-motion:reduce){.about-scrap{animation:none!important}}

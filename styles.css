@@ -25,3 +25,9 @@
 @keyframes collageFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-9px) rotate(-1.2deg)}}
 @media(max-width:680px){.hero-art{height:320px;margin:0 0 3px;}.hero-collage{width:115%;max-width:440px}.hero-scrap{top:8%;right:2%;font-size:7px;padding:8px 11px}.hero-caption{bottom:5%;left:0;font-size:6px}.hero-spark-one{top:3%;left:5%;font-size:22px}.hero-spark-two{bottom:8%;right:1%;font-size:20px}.project-image{border-width:4px}}
 @media(prefers-reduced-motion:reduce){.hero-collage,.hero-spark-one,.hero-spark-two{animation:none!important}}
+.hero-stage{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr)}
+.hero-copy,.hero-art{min-width:0}
+.hero-art{overflow:hidden}
+.hero-collage{width:100%;max-width:500px}
+@media(max-width:900px){.hero-collage{max-width:430px}}
+@media(max-width:680px){.hero-art{overflow:hidden}.hero-collage{width:100%;max-width:360px}}
